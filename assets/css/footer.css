@@ -1,0 +1,37 @@
+#container-rodape {
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  padding: 2rem;
+}
+
+#container-footer {
+  margin-top: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#rodape {
+  display: flex;
+  gap: 15px;
+  padding: 1.3rem;
+  color: rgb(56, 56, 185);
+}
+
+.develop {
+  color: rgb(212, 212, 212);
+}
+
+.github img {
+  width: 20px;
+  margin-bottom: 0.4rem;
+}
+
+.seta img {
+  width: 2.2rem;
+  border-radius: 50%;
+}
+
+.direito {
+  color: rgba(245, 245, 245, 0.582);
+}

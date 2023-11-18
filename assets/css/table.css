@@ -1,0 +1,31 @@
+#main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#section-container {
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.content-information {
+  background-color: var(--primary-color-marrom);
+  padding: 2rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tittle-information {
+  margin-top: 4rem;
+}
+
+.content-text {
+  background-color: var(--primary-color);
+  margin-top: 2.5rem;
+  padding: 3rem;
+  height: 30rem;
+  border-radius: 0.3rem;
+}

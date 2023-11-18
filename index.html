@@ -4,25 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/animation.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="./assets/css/form.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
+    <link rel="stylesheet" href="./assets/css/table.css">
   </head>
   <body>
-    <!-- BARRA DE NAVEGACAO -->
-    <aside id="container">
-      <nav id="content-nav">
-        <h1>Calculadora de IMC</h1>
-        <ul id="menu">
-          <button>Botao trocar tema</button>
-        </ul>
-      </nav>
-    </aside>
+    <!-- HOME  -->
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <section id="home">
+      <div id="section-home">
+        <h2>Calcule agora seu IMC</h2>
+        <a href="#container-form">Experimente </a>
+      </div>
+    </section>
 
     <!-- CONTEUDO -->
     <main id="main-container">
+      <section id="table-section"></section>
       <div id="section-container">
         <!-- sessao de informacao -->
 
         <section class="content-information">
-          <h3>Tabela</h3>
+          <span class="tittle-information"><h3>Tabela</h3></span>
           <div class="content-text">
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum,
@@ -35,25 +43,50 @@
         <div id="container-form">
           <form action="" id="box-form">
             <label for="peso" class="tittle-form">Peso:</label>
-            <input type="text" id="peso" name="peso" class="input-form" />
+            <input
+              type="text"
+              id="peso"
+              name="peso"
+              class="input-form"
+              placeholder="digite seu peso"
+            />
             <label for="altura" class="tittle-form">Altura:</label>
-            <input type="text" id="altura" name="altura" class="input-form" />
+            <input
+              type="text"
+              id="altura"
+              name="altura"
+              class="input-form"
+              placeholder="digite sua altura"
+            />
             <button type="submit" id="btn">Calcular</button>
           </form>
 
           <!-- Resultado -->
-          <div id="result"></div>
+          <div id="result">Resultado:</div>
         </div>
       </div>
-
-      <!-- Rodape -->
+    </main>
+    <br />
+    <hr />
+    <!-- Rodape -->
+    <div id="container-rodape">
       <footer id="container-footer">
+        <span class="seta">
+          <a href="#"
+            ><img src="./assets/img/seta branca.jpg" alt="voltar"
+          /></a>
+        </span>
         <div id="rodape">
           <span>Desenvolvido por <span class="develop">Pedro Rosa</span></span>
-          <span class="direito">&copy;2023 - Todos os direitos reservados.</span>
-          <span class="github"><a href="#"><img src="#" alt="github"></a></span>
+          <span class="direito"
+            >&copy;2023 - Todos os direitos reservados.</span
+          >
         </div>
+        <span class="github"
+          ><a href="https://github.com/devpedrorosa" target="_blank"
+            ><img src="./assets/img/github.png" alt="github" /></a
+        ></span>
       </footer>
-    </main>
+    </div>
   </body>
 </html>
