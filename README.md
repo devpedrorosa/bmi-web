@@ -1,4 +1,4 @@
-Certainly! Here's the description translated into English:
+
 
 ---
 
