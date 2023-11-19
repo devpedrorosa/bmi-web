@@ -26,4 +26,3 @@ Thank you for using my BMI Calculator. Take care of your health and use this too
 
 ---
 
-Make sure to customize the description as needed and add specific details about the technologies you used.
