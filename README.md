@@ -18,9 +18,13 @@ BMI is a valuable tool for assessing body composition and identifying potential 
 
 ## PHOTOS
 
-![Imagem1](./assets/img/imagem1.png)
-![Imagem2](./assets/img/imagem2.png)
-![Imagem3](./assets/img/imagem3.png)
+<table>
+  <tr>
+    <td><img src="./assets/img/imagem1.png" width="500"></td>
+    <td><img src="./assets/img/imagem2.png" width="500"></td>
+    <td><img src="./assets/img/imagem3.png" width="500"></td>
+  </tr>
+</table>
 
 ## Development
 
