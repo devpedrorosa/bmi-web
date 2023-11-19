@@ -40,7 +40,7 @@
   background: linear-gradient(120deg, #3bb1ffd8, #25ffe2da);
   border-radius: 8px;
   font-family: 'Montserrat', sans-serif;
-  transition: all 0.2s ease-in-out;
+  transition: all 520ms ease-in-out;
 }
 
 #btn:hover {
