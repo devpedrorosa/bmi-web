@@ -1,0 +1,61 @@
+#table-section {
+  height: 100vh;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+
+.person-man {
+  margin-top: 7rem;
+}
+
+.person-man img {
+  width: 8rem;
+  margin-bottom: 3rem;
+}
+.tittle-person {
+  color: rgb(0, 0, 0);
+  display: flex;
+  margin-top: 3.5rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  letter-spacing: 2px;
+  font-size: x-large;
+}
+
+.section-information {
+  background-color: rgb(254, 254, 254);
+  z-index: 1;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3.4rem;
+  border-radius: 2rem;
+  box-sizing: content-box;
+  transition: all 10ms ease-in;
+}
+
+.card p {
+  color: rgb(0, 0, 0);
+  font-size: small;
+  width: 20rem;
+}
+
+
+.calculo {
+  font-family: 'Montserrat', Open-sans;
+}
+
+.tittle-calculo{
+  font-weight: bold;
+}
+
+.ajuste{
+  background-color: rgb(255, 255, 255);
+  padding: 14.1rem;
+}
