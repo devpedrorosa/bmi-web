@@ -2,7 +2,7 @@
 
 # BMI Calculator (Body Mass Index)
 
-##VERSION 1.0 -WITH HTML AND CSS ONLY
+## VERSION 1.0 -WITH HTML AND CSS ONLY
 
 Welcome to my BMI Calculator, a tool I developed on my own to help you monitor and understand your body health. The Body Mass Index is a simple yet effective measure that assesses the relationship between your weight and height, providing insights into your nutritional status.
 
