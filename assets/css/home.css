@@ -56,8 +56,8 @@
 }
 
 #inf-nav a:hover{
-  color: rgb(115, 137, 249);
-  background: rgba(0, 0, 0, 0.563);
+  color: rgb(115, 240, 249);
+  background: rgba(0, 0, 0, 0.256);
   transform: scale(1.1);
   transition: all 425ms ease-out;
 }

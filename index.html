@@ -33,7 +33,7 @@
     <main id="main-container">
       <div class="section-information">
         <div class="tittle-person">
-          <h3>HOMEM</h3>
+          <h4>Categoria</h4>
         </div>
         <section id="table-section">
           <div class="card">
@@ -119,8 +119,8 @@
               />
               <p>
                 <span class="calculo">Entre 35 e 40</span><br /><br />
-                <span class="tittle-calculo">Obesidade grau 2</span
-                ><br /><b></b>
+                <span class="tittle-calculo">Obesidade grau 2</span><br /><b></b
+                ><br />
                 Mesmo que seus exames aparentem estar normais, é hora de se
                 cuidar, iniciando mudanças no estilo de vida com o
                 acompanhamento próximo de profissionais de saúde.
@@ -137,7 +137,7 @@
               <p>
                 <span class="calculo">Acima de 40</span><br /><br /><span
                   class="tittle-calculo"
-                  >Obesidade grau3</span
+                  >Obesidade grau 3</span
                 ><br /><br />
                 Aqui o sinal é vermelho, com forte probabilidade de já existirem
                 doenças muito graves associadas. O tratamento deve ser ainda
@@ -152,12 +152,22 @@
         <!-- sessao de informacao -->
 
         <section class="content-information">
-          <span class="tittle-information"><h3>Tabela</h3></span>
+          <span class="tittle-information"><h3>Selecione</h3></span>
           <div class="content-text">
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum,
-              fugiat.
-            </p>
+            <form action="" id="box-check">
+              <div id="box-container">
+                <label class="check-label" for="sexo">Sexo:</label>
+                <div class="box-check-input">
+                  <input type="radio" name="sexo" value="" id="sexo" />Masculino
+                  <input type="radio" name="sexo" value="" id="sexo" />Feminino
+                </div>
+                <label class="check-label" for="idade">Categoria:</label>
+                <div class="box-check-input">
+                  <input type="radio" name="idade" value="" id="idade" />Adulto
+                  <input type="radio" name="idade" value="" id="idade" />Criança
+                </div>
+              </div>
+            </form>
           </div>
         </section>
 
@@ -171,6 +181,7 @@
               name="peso"
               class="input-form"
               placeholder="digite seu peso(kg)"
+              autofocus
             />
             <label for="altura" class="tittle-form">Altura:</label>
             <input
@@ -179,6 +190,7 @@
               name="altura"
               class="input-form"
               placeholder="digite sua altura(m)"
+              autofocus
             />
             <button type="submit" id="btn">Calcular</button>
           </form>
@@ -188,6 +200,7 @@
         </div>
       </div>
     </main>
+    <div class="lista"></div>
     <!-- Rodape -->
     <div id="container-rodape">
       <footer id="container-footer">

@@ -10,22 +10,60 @@
 }
 
 .content-information {
-  background-color: var(--primary-color-marrom);
+  background: radial-gradient(ellipse at bottom, #010117 0%, #0d0d3c 100%);
+  z-index: 3;
   padding: 2rem;
   width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.336);
 }
 
 .tittle-information {
   margin-top: 4rem;
+  color: white;
+  align-items: center;
+  margin-left: 2rem;
 }
 
 .content-text {
-  background-color: var(--primary-color);
   margin-top: 2.5rem;
   padding: 3rem;
   height: 30rem;
   border-radius: 0.3rem;
+  padding: 4rem;
+}
+
+#box-check {
+  color: aliceblue;
+  gap: 1.5rem;
+  font-family: 'Montserrat';
+}
+
+#box-check input {
+  width: 3rem;
+}
+
+.check-label {
+  font-family: 'Open Sans';
+  font-weight: bold;
+  margin-right: 10rem;
+}
+
+#box-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+  
+}
+
+.box-check-input{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
 }

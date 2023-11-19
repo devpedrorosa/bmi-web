@@ -2,7 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: whitesmoke;
+  background: linear-gradient(120deg, #151554d8, rgb(17, 14, 31));
+  z-index: 60;
   flex-direction: column;
 
   width: 50%;
@@ -19,6 +20,7 @@
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   margin-top: 2rem;
+  color: whitesmoke;
 }
 
 .input-form {
@@ -28,6 +30,7 @@
   margin-top: 1rem;
   width: 23rem;
 }
+
 
 #btn {
   margin-top: 4rem;
@@ -49,4 +52,8 @@
   background: linear-gradient(120deg, #0f0f0fd8, #25d3ffda);
   transform: scale(1.03);
   transition: all 520ms;
+}
+
+#result {
+  color: whitesmoke;
 }

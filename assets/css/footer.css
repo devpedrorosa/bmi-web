@@ -44,3 +44,10 @@
 .direito {
   color: rgba(245, 245, 245, 0.582);
 }
+
+.lista{
+  z-index: 50;
+  border: 2px 10px 3px;
+  padding: 2px;
+  background-color: rgb(0, 0, 0);
+}
