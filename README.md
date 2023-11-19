@@ -16,6 +16,12 @@ The calculator will instantly provide your BMI and a corresponding classificatio
 
 BMI is a valuable tool for assessing body composition and identifying potential health risks. Understanding your BMI can help set realistic goals to achieve or maintain a healthy weight.
 
+## PHOTOS
+
+![Imagem1](./assets/img/imagem1.png)
+![Imagem2](./assets/img/imagem2.png)
+![Imagem3](./assets/img/imagem3.png)
+
 ## Development
 
 This BMI Calculator was entirely developed by me, without external assistance. I used [ HTML, CSS, JavaScript]. Feel free to contribute, report issues, or suggest improvements. I am open to collaborations!
@@ -23,5 +29,3 @@ This BMI Calculator was entirely developed by me, without external assistance. I
 Thank you for using my BMI Calculator. Take care of your health and use this tool as a resource to promote a healthy lifestyle.
 
 ---
-
-
