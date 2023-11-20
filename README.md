@@ -12,6 +12,15 @@ Welcome to my BMI Calculator, a tool I developed on my own to help you monitor a
 2. Enter your height in meters.
 3. Click the "Calculate BMI" button.
 
+## LINK WEBSITE:
+<br>
+<hr>
+ <a href ="https://imc-calculadora-devpedrorosa.netlify.app/#container-form" alt="website">BMI-CALCULATOR</a>
+ <hr>
+ <br>
+ <br>
+ <br>
+
 The calculator will instantly provide your BMI and a corresponding classification, indicating whether you fall within the healthy range, underweight, overweight, or obese.
 
 ## Why It's Important
