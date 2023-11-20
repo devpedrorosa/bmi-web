@@ -14,7 +14,7 @@ Welcome to my BMI Calculator, a tool I developed on my own to help you monitor a
 
 ## LINK WEBSITE:
 
- <a href ="imc-calculadora-devpedrorosa.netlify.app" alt="website">BMI-CALCULATOR</a>
+ <a href ="https://imc-calculadora-devpedrorosa.netlify.app/"  target="_blank"  alt="website">BMI-CALCULATOR</a>
  
  <br>
  <br>
