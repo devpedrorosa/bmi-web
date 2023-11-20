@@ -13,6 +13,7 @@ Welcome to my BMI Calculator, a tool I developed on my own to help you monitor a
 3. Click the "Calculate BMI" button.
 
 ## LINK WEBSITE:
+* only desktop 
 [BMI-CALCULATOR](https://imc-calculadora-devpedrorosa.netlify.app/)
 
  
