@@ -29,8 +29,12 @@
   border-style: none;
   margin-top: 1rem;
   width: 23rem;
+  background: #eee;
 }
 
+.input-form[type='text'] {
+  color: black;
+}
 
 #btn {
   margin-top: 4rem;
