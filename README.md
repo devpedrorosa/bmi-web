@@ -2,7 +2,7 @@
 
 # BMI Calculator (Body Mass Index)
 
-## VERSION 1.0 -WITH HTML AND CSS ONLY
+## VERSION 1.5 -WITH HTML & CSS & JS
 
 Welcome to my BMI Calculator, a tool I developed on my own to help you monitor and understand your body health. The Body Mass Index is a simple yet effective measure that assesses the relationship between your weight and height, providing insights into your nutritional status.
 
@@ -11,6 +11,17 @@ Welcome to my BMI Calculator, a tool I developed on my own to help you monitor a
 1. Enter your weight in kilograms.
 2. Enter your height in meters.
 3. Click the "Calculate BMI" button.
+
+## LINK WEBSITE:
+* ONLY DESKTOP VERSION 
+<br>
+
+* [BMI-CALCULATOR](https://imc-calculadora-devpedrorosa.netlify.app/)
+
+
+ 
+ <br>
+ <br>
 
 The calculator will instantly provide your BMI and a corresponding classification, indicating whether you fall within the healthy range, underweight, overweight, or obese.
 
