@@ -1,227 +1,195 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculadora de IMC</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/animation.css" />
-    <link rel="stylesheet" href="./assets/css/footer.css" />
-    <link rel="stylesheet" href="./assets/css/form.css" />
-    <link rel="stylesheet" href="./assets/css/home.css" />
-    <link rel="stylesheet" href="./assets/css/table.css" />
-    <link rel="stylesheet" href="./assets/css/section.css" />
-    <link rel="stylesheet" href="./assets/responsive/smartphone.css" />
-  </head>
-  <body>
-    <aside id="inf-aside">
-      <nav id="inf-nav">
-        <a href="#main-container">informações</a>
-      </nav>
-    </aside>
-    <!-- HOME  -->
-    <div id="stars"></div>
-    <div id="stars2"></div>
-    <div id="stars3"></div>
-    <section id="home">
-      <div id="section-home">
-        <h2>Calcule agora seu IMC</h2>
-        <a href="#container-form">Experimente </a>
-      </div>
-    </section>
 
-    <!-- CONTEUDO -->
-    <main id="main-container">
-      <div class="section-information">
-        <div class="tittle-person">
-          <h4>Categoria</h4>
-        </div>
-        <section id="table-section">
-          <div class="card">
-            <div class="person-man">
-              <img
-                src="https://abeso.org.br/wp-content/uploads/2019/12/imc_06.png.webp"
-                alt="homem"
-              />
-              <p>
-                <span class="calculo">18,5 ou menos <br /><br /></span>
-                <span class="tittle-calculo">Abaixo do normal</span><br />
-                <br />
-                Procure um médico. Algumas pessoas têm um baixo peso por
-                características do seu organismo e tudo bem. Outras podem estar
-                enfrentando problemas, como a desnutrição. É preciso saber qual
-                é o caso.
-              </p>
-            </div>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de IMC</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/animation.css" />
+  <link rel="stylesheet" href="./assets/css/footer.css" />
+  <link rel="stylesheet" href="./assets/css/form.css" />
+  <link rel="stylesheet" href="./assets/css/home.css" />
+  <link rel="stylesheet" href="./assets/css/table.css" />
+  <link rel="stylesheet" href="./assets/css/section.css" />
+  <link rel="stylesheet" href="./assets/responsive/smartphone.css" />
+</head>
 
-          <div class="card">
-            <div class="person-man">
-              <img
-                src="https://abeso.org.br/wp-content/uploads/2019/12/imc_05.png.webp"
-                alt="homem"
-              />
-
-              <p>
-                <span class="calculo"
-                  >18,6 e 24,9 <br />
-                  <br
-                /></span>
-                <span class="tittle-calculo">Normal</span> <br /><br />
-                Que bom que você está com o peso normal! E o melhor jeito de
-                continuar assim é mantendo um estilo de vida ativo e uma
-                alimentação equilibrada.
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="person-man">
-              <img
-                src="https://abeso.org.br/wp-content/uploads/2019/12/imc_04.png.webp"
-                alt="homem"
-              />
-              <p>
-                <span class="calculo">Entre 25 e 29,9<br /><br /></span>
-                <span class="tittle-calculo">Sobrepeso</span><br /><br />
-                Ele é, na verdade, uma pré-obesidade e muitas pessoas nessa
-                faixa já apresentam doenças associadas, como diabetes e
-                hipertensão. Importante rever hábitos e buscar ajuda antes de,
-                por uma série de fatores, entrar na faixa da obesidade pra
-                valer.
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="person-man">
-              <img
-                src="https://abeso.org.br/wp-content/uploads/2019/12/imc_03.png.webp"
-                alt="homem"
-              />
-              <p>
-                <span class="calculo">Entre 30 e 35</span><br /><br /><span
-                  class="tittle-calculo"
-                  >Obesidade grau 1</span
-                ><br /><br />
-                Sinal de alerta! Chegou na hora de se cuidar, mesmo que seus
-                exames sejam normais. Vamos dar início a mudanças hoje! Cuide de
-                sua alimentação. Você precisa iniciar um acompanhamento com
-                nutricionista e/ou endocrinologista.
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="person-man">
-              <img
-                src="https://abeso.org.br/wp-content/uploads/2019/12/imc_02.png.webp"
-                alt="homem"
-              />
-              <p>
-                <span class="calculo">Entre 35 e 40</span><br /><br />
-                <span class="tittle-calculo">Obesidade grau 2</span><br /><b></b
-                ><br />
-                Mesmo que seus exames aparentem estar normais, é hora de se
-                cuidar, iniciando mudanças no estilo de vida com o
-                acompanhamento próximo de profissionais de saúde.
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="person-man">
-              <img
-                src="https://abeso.org.br/wp-content/uploads/2019/12/imc_01.png.webp"
-                alt="homem"
-              />
-              <p>
-                <span class="calculo">Acima de 40</span><br /><br /><span
-                  class="tittle-calculo"
-                  >Obesidade grau 3</span
-                ><br /><br />
-                Aqui o sinal é vermelho, com forte probabilidade de já existirem
-                doenças muito graves associadas. O tratamento deve ser ainda
-                mais urgente.
-              </p>
-            </div>
-          </div>
-        </section>
-      </div>
-      <div class="ajuste"></div>
-
-      <!-- sessao de informacao -->
-      <div id="section-container">
-        <section class="content-information">
-          <span class="tittle-information"><h3>Selecione</h3></span>
-          <div class="content-text">
-            <form action="" id="box-check">
-              <div id="box-container">
-                <label class="check-label" for="sexo">Sexo:</label>
-                <div class="box-check-input">
-                  <input type="radio" name="sexo" value="" id="sexo" />Masculino
-                  <input type="radio" name="sexo" value="" id="sexo" />Feminino
-                </div>
-                <label class="check-label" for="idade">Categoria:</label>
-                <div class="box-check-input">
-                  <input type="radio" name="idade" value="" id="idade" />Adulto
-                  <input type="radio" name="idade" value="" id="idade" />Criança
-                </div>
-              </div>
-            </form>
-          </div>
-        </section>
-
-        <!-- sessao da Calculadora -->
-        <div id="container-form">
-          <form action="" id="box-form">
-            <label for="peso" class="tittle-form">Peso:</label>
-            <input
-              type="text"
-              id="peso"
-              name="peso"
-              class="input-form"
-              placeholder="digite seu peso(kg)"
-              autocomplete="off"
-            />
-            <label for="altura" class="tittle-form">Altura:</label>
-            <input
-              type="text"
-              id="altura"
-              name="altura"
-              class="input-form"
-              placeholder="digite sua altura(m)"
-              autocomplete="off"
-            />
-            <button id="btn">Calcular</button>
-          </form>
-
-          <!-- Resultado -->
-          <div id="result">Resultado:</div>
-        </div>
-      </div>
-    </main>
-    <div class="lista"></div>
-    <!-- Rodape -->
-    <div id="container-rodape">
-      <footer id="container-footer">
-        <span class="seta">
-          <a href="#"
-            ><img src="./assets/img/seta branca2.jpg" alt="voltar"
-          /></a>
-        </span>
-        <div id="rodape">
-          <span>Desenvolvido por <span class="develop">Pedro Rosa</span></span>
-          <span class="direito"
-            >&copy;2023 - Todos os direitos reservados.</span
-          >
-        </div>
-        <span class="github"
-          ><a href="https://github.com/pedrorosa-dev" target="_blank"
-            ><img src="./assets/img/github.png" alt="github" /></a
-        ></span>
-      </footer>
+<body>
+  <aside id="inf-aside">
+    <nav id="inf-nav">
+      <a href="#main-container">informações</a>
+    </nav>
+  </aside>
+  <!-- HOME  -->
+  <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>
+  <section id="home">
+    <div id="section-home">
+      <h2>Calcule agora seu IMC</h2>
+      <a href="#container-form">Experimente </a>
     </div>
-    <script src="./assets/js/imc.js"></script>
-  </body>
+  </section>
+
+  <!-- CONTEUDO -->
+  <main id="main-container">
+    <div class="section-information">
+      <div class="tittle-person">
+        <h4>Categoria</h4>
+      </div>
+      <section id="table-section">
+        <div class="card">
+          <div class="person-man">
+            <img src="https://abeso.org.br/wp-content/uploads/2019/12/imc_06.png.webp" alt="homem" />
+            <p>
+              <span class="calculo">18,5 ou menos <br /><br /></span>
+              <span class="tittle-calculo">Abaixo do normal</span><br />
+              <br />
+              Procure um médico. Algumas pessoas têm um baixo peso por
+              características do seu organismo e tudo bem. Outras podem estar
+              enfrentando problemas, como a desnutrição. É preciso saber qual
+              é o caso.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="person-man">
+            <img src="https://abeso.org.br/wp-content/uploads/2019/12/imc_05.png.webp" alt="homem" />
+
+            <p>
+              <span class="calculo">18,6 e 24,9 <br />
+                <br /></span>
+              <span class="tittle-calculo">Normal</span> <br /><br />
+              Que bom que você está com o peso normal! E o melhor jeito de
+              continuar assim é mantendo um estilo de vida ativo e uma
+              alimentação equilibrada.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="person-man">
+            <img src="https://abeso.org.br/wp-content/uploads/2019/12/imc_04.png.webp" alt="homem" />
+            <p>
+              <span class="calculo">Entre 25 e 29,9<br /><br /></span>
+              <span class="tittle-calculo">Sobrepeso</span><br /><br />
+              Ele é, na verdade, uma pré-obesidade e muitas pessoas nessa
+              faixa já apresentam doenças associadas, como diabetes e
+              hipertensão. Importante rever hábitos e buscar ajuda antes de,
+              por uma série de fatores, entrar na faixa da obesidade pra
+              valer.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="person-man">
+            <img src="https://abeso.org.br/wp-content/uploads/2019/12/imc_03.png.webp" alt="homem" />
+            <p>
+              <span class="calculo">Entre 30 e 35</span><br /><br /><span class="tittle-calculo">Obesidade grau
+                1</span><br /><br />
+              Sinal de alerta! Chegou na hora de se cuidar, mesmo que seus
+              exames sejam normais. Vamos dar início a mudanças hoje! Cuide de
+              sua alimentação. Você precisa iniciar um acompanhamento com
+              nutricionista e/ou endocrinologista.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="person-man">
+            <img src="https://abeso.org.br/wp-content/uploads/2019/12/imc_02.png.webp" alt="homem" />
+            <p>
+              <span class="calculo">Entre 35 e 40</span><br /><br />
+              <span class="tittle-calculo">Obesidade grau 2</span><br /><b></b><br />
+              Mesmo que seus exames aparentem estar normais, é hora de se
+              cuidar, iniciando mudanças no estilo de vida com o
+              acompanhamento próximo de profissionais de saúde.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="person-man">
+            <img src="https://abeso.org.br/wp-content/uploads/2019/12/imc_01.png.webp" alt="homem" />
+            <p>
+              <span class="calculo">Acima de 40</span><br /><br /><span class="tittle-calculo">Obesidade grau
+                3</span><br /><br />
+              Aqui o sinal é vermelho, com forte probabilidade de já existirem
+              doenças muito graves associadas. O tratamento deve ser ainda
+              mais urgente.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="ajuste"></div>
+
+    <!-- sessao de informacao -->
+    <!-- FIXME: NAO FUNCIONA NO JAVASCRIPT ENTAO DEPOIS TEM QUE AJEITAR -->
+    <!-- <div id="section-container"> -->
+    <!--   <section class="content-information"> -->
+    <!--     <span class="tittle-information"><h3>Selecione</h3></span> -->
+    <!--     <div class="content-text"> -->
+    <!--       <form action="" id="box-check"> -->
+    <!--         <div id="box-container"> -->
+    <!--           <label class="check-label" for="sexo">Sexo:</label> -->
+    <!--           <div class="box-check-input"> -->
+    <!--             <input type="radio" name="sexo" value="" id="sexo" />Masculino -->
+    <!--             <input type="radio" name="sexo" value="" id="sexo" />Feminino -->
+    <!--           </div> -->
+    <!--           <label class="check-label" for="idade">Categoria:</label> -->
+    <!--           <div class="box-check-input"> -->
+    <!--             <input type="radio" name="idade" value="" id="idade" />Adulto -->
+    <!--             <input type="radio" name="idade" value="" id="idade" />Criança -->
+    <!--           </div> -->
+    <!--         </div> -->
+    <!--       </form> -->
+    <!--     </div> -->
+    <!--   </section> -->
+
+    <div id="section-container">
+      <section class="content-information">
+        <div class="tittle-information">
+          <h3>Calcule aqui</h3>
+        </div>
+      </section>
+
+      <!-- sessao da Calculadora -->
+      <div id="container-form">
+        <form action="" id="box-form">
+          <label for="peso" class="tittle-form">Peso:</label>
+          <input type="text" id="peso" name="peso" class="input-form" placeholder="digite seu peso(kg)"
+            autocomplete="off" />
+          <label for="altura" class="tittle-form">Altura:</label>
+          <input type="text" id="altura" name="altura" class="input-form" placeholder="digite sua altura(m)"
+            autocomplete="off" />
+          <button id="btn">Calcular</button>
+        </form>
+
+        <!-- Resultado -->
+        <div id="result">Resultado:</div>
+      </div>
+    </div>
+  </main>
+  <div class="lista"></div>
+  <!-- Rodape -->
+  <div id="container-rodape">
+    <footer id="container-footer">
+      <span class="seta">
+        <a href="#"><img src="./assets/img/seta branca2.jpg" alt="voltar" /></a>
+      </span>
+      <div id="rodape">
+        <span>Desenvolvido por <span class="develop">Pedro Rosa</span></span>
+        <span class="direito">&copy;2023 - Todos os direitos reservados.</span>
+      </div>
+      <span class="github"><a href="https://github.com/pedrorosa-dev" target="_blank"><img src="./assets/img/github.png"
+            alt="github" /></a></span>
+    </footer>
+  </div>
+  <script src="./assets/js/imc.js"></script>
+</body>
+
 </html>
