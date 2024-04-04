@@ -12,28 +12,26 @@ document.addEventListener('DOMContentLoaded', function() {
       return '';
     }
 
-    // Adiciona a vírgula para representar o ponto flutuante caso necessario
-    const numeroComoFloat = parseFloat(numeroFormatado.replace(',', '.'));
+    const numeroComoFloat = parseFloat(numeroFormatado);
 
     return numeroComoFloat;
   };
 
-  const adicionarZeros = function(valor, casasDecimais) {
-    const partes = valor.toString().split('.');
-    if (partes.length === 1) {
-      return valor.toFixed(casasDecimais);
-    } else {
-      const parteDecimal = partes[1];
-      let resultado = '';
-
-      // Adiciona zeros à parte decimal se necessário
-      for (let i = 0; i < casasDecimais - parteDecimal.length; i++) {
-        resultado += '0';
-      }
-
-      return valor + resultado;
-    }
-  };
+  // FIXME: AJEITAR O ADICIONAR ZEROS
+  // const adicionarZeros = function(valor, casasDecimais) {
+  //   const partes = valor.toString().split('.');
+  //   if (partes.length === 1) {
+  //     return valor.toFixed(casasDecimais);
+  //   } else {
+  //     const parteDecimal = partes[1];
+  //     let resultado = '';
+  //     // Adiciona zeros à parte decimal se necessário
+  //     for (let i = 0; i < casasDecimais - parteDecimal.length; i++) {
+  //       resultado += '0';
+  //     }
+  //     return valor + resultado;
+  //   }
+  // };
 
   pesoInput.addEventListener('input', function(event) {
     const cursorPosition = event.target.selectionStart;
@@ -43,19 +41,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // HACK: SO FUNCIONA SE COLOCAR UM PONTO
     //formata o peso para mostrar em quilogramas
     if (peso.length === 3) {
-      peso = peso.slice(0, 1) + ',' + peso.slice(1);
+      peso = peso.slice(0, 1) + peso.slice(1);
     } else if (peso.length === 4) {
-      peso = peso.slice(0, 2) + ',' + peso.slice(2);
+      peso = peso.slice(0, 2) + peso.slice(2);
     }
 
     event.target.value = peso === '' ? '' : adicionarZeros(peso, 2); // Alterado para 2 casas decimais
     event.target.setSelectionRange(cursorPosition, cursorPosition);
 
   });
-
-
-
-
 
 
   alturaInput.addEventListener('input', function(event) {
