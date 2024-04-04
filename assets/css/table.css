@@ -11,7 +11,6 @@
 
 .content-information {
   background: radial-gradient(ellipse at bottom, #010117 0%, #0d0d3c 100%);
-  z-index: 3;
   padding: 2rem;
   width: 50%;
   display: flex;
