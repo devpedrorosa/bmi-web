@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const alturaInput = document.getElementById('altura');
   const resultadoDiv = document.getElementById('result');
 
+  // HACK: NAO ESTA FUCIONANDO CONFORME O ESPERADO
   const formatarPesoAltura = function(valor) {
     // Remove caracteres não numéricos
     const numeroFormatado = valor.replace(/[^0-9.]/g, '');
