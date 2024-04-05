@@ -1,36 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora de IMC</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/animation.css" />
-    <link rel="stylesheet" href="./assets/css/footer.css" />
-    <link rel="stylesheet" href="./assets/css/form.css" />
-    <link rel="stylesheet" href="./assets/css/home.css" />
-    <link rel="stylesheet" href="./assets/css/table.css" />
-    <link rel="stylesheet" href="./assets/css/section.css" />
-    <link rel="stylesheet" href="./assets/responsive/smartphone.css" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./assets/icon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/icon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./assets/icon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="./assets/icon/site.webmanifest" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/animation.css" />
+    <link rel="stylesheet" href="/assets/css/footer.css" />
+    <link rel="stylesheet" href="/assets/css/form.css" />
+    <link rel="stylesheet" href="/assets/css/home.css" />
+    <link rel="stylesheet" href="/assets/css/table.css" />
+    <link rel="stylesheet" href="/assets/css/section.css" />
+    <link rel="stylesheet" href="/assets/css/smartphone.css" />
   </head>
+
   <body>
     <aside id="inf-aside">
       <nav id="inf-nav">
@@ -169,24 +152,35 @@
       <div class="ajuste"></div>
 
       <!-- sessao de informacao -->
+      <!-- FIXME: NAO FUNCIONA NO JAVASCRIPT ENTAO DEPOIS TEM QUE AJEITAR -->
+      <!-- <div id="section-container"> -->
+      <!--   <section class="content-information"> -->
+      <!--     <span class="tittle-information"><h3>Selecione</h3></span> -->
+      <!--     <div class="content-text"> -->
+      <!--       <form action="" id="box-check"> -->
+      <!--         <div id="box-container"> -->
+      <!--           <label class="check-label" for="sexo">Sexo:</label> -->
+      <!--           <div class="box-check-input"> -->
+      <!--             <input type="radio" name="sexo" value="" id="sexo" />Masculino -->
+      <!--             <input type="radio" name="sexo" value="" id="sexo" />Feminino -->
+      <!--           </div> -->
+      <!--           <label class="check-label" for="idade">Categoria:</label> -->
+      <!--           <div class="box-check-input"> -->
+      <!--             <input type="radio" name="idade" value="" id="idade" />Adulto -->
+      <!--             <input type="radio" name="idade" value="" id="idade" />Criança -->
+      <!--           </div> -->
+      <!--         </div> -->
+      <!--       </form> -->
+      <!--     </div> -->
+      <!--   </section> -->
+
       <div id="section-container">
         <section class="content-information">
-          <span class="tittle-information"><h3>Selecione</h3></span>
-          <div class="content-text">
-            <form action="" id="box-check">
-              <div id="box-container">
-                <label class="check-label" for="sexo">Sexo:</label>
-                <div class="box-check-input">
-                  <input type="radio" name="sexo" value="" id="sexo" />Masculino
-                  <input type="radio" name="sexo" value="" id="sexo" />Feminino
-                </div>
-                <label class="check-label" for="idade">Categoria:</label>
-                <div class="box-check-input">
-                  <input type="radio" name="idade" value="" id="idade" />Adulto
-                  <input type="radio" name="idade" value="" id="idade" />Criança
-                </div>
-              </div>
-            </form>
+          <div class="tittle-information">
+            <h3>Calcule aqui</h3>
+            <span>
+              <p>Basta digitar os numeros</p>
+            </span>
           </div>
         </section>
 
@@ -225,21 +219,21 @@
       <footer id="container-footer">
         <span class="seta">
           <a href="#"
-            ><img src="./assets/img/seta branca2.jpg" alt="voltar"
+            ><img src="/assets/img/seta branca2.jpg" alt="voltar"
           /></a>
         </span>
         <div id="rodape">
-          <span>Desenvolvido por <span class="develop">Pedro Rosa</span></span>
+          Desenvolvido por <span class="develop">Pedro Rosa</span>
           <span class="direito"
             >&copy;2023 - Todos os direitos reservados.</span
           >
         </div>
         <span class="github"
           ><a href="https://github.com/pedrorosa-dev" target="_blank"
-            ><img src="./assets/img/github.png" alt="github" /></a
+            ><img src="/assets/img/github.png" alt="github" /></a
         ></span>
       </footer>
     </div>
-    <script src="./assets/js/imc.js"></script>
+    <script src="/src/imc.js"></script>
   </body>
 </html>

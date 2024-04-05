@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const alturaInput = document.getElementById('altura');
   const resultadoDiv = document.getElementById('result');
 
+  // HACK: NAO ESTA FUCIONANDO CONFORME O ESPERADO
   const formatarPesoAltura = function (valor) {
     // Remove caracteres não numéricos
     const numeroFormatado = valor.replace(/[^0-9.]/g, '');
@@ -12,30 +13,40 @@ document.addEventListener('DOMContentLoaded', function () {
       return '';
     }
 
-    // Adiciona a vírgula para representar o ponto flutuante
-    const numeroComoFloat = parseFloat(numeroFormatado.replace(',', '.'));
+    const numeroComoFloat = parseFloat(numeroFormatado);
 
     return numeroComoFloat;
   };
 
-  const adicionarZeros = function (valor, casasDecimais) {
-    const partes = valor.toString().split('.');
-    if (partes.length === 1) {
-      return valor.toFixed(casasDecimais);
-    } else {
-      const parteDecimal = partes[1];
-      if (parteDecimal.length < casasDecimais) {
-        return valor.toFixed(casasDecimais);
-      }
-      return valor;
-    }
-  };
+  // FIXME: AJEITAR O ADICIONAR ZEROS
+  // const adicionarZeros = function(valor, casasDecimais) {
+  //   const partes = valor.toString().split('.');
+  //   if (partes.length === 1) {
+  //     return valor.toFixed(casasDecimais);
+  //   } else {
+  //     const parteDecimal = partes[1];
+  //     let resultado = '';
+  //     // Adiciona zeros à parte decimal se necessário
+  //     for (let i = 0; i < casasDecimais - parteDecimal.length; i++) {
+  //       resultado += '0';
+  //     }
+  //     return valor + resultado;
+  //   }
+  // };
 
   pesoInput.addEventListener('input', function (event) {
     const cursorPosition = event.target.selectionStart;
     let peso = formatarPesoAltura(event.target.value);
     peso = isNaN(peso) ? '' : peso.toString();
-    event.target.value = peso === '' ? '' : adicionarZeros(peso, 1);
+
+    // HACK: SO FUNCIONA SE COLOCAR UM PONTO
+    // formata o peso para mostrar em quilogramas
+    if (peso.length === 3) {
+      peso = peso.slice(0, 1) + peso.slice(1);
+    } else if (peso.length === 4) {
+      peso = peso.slice(0, 2) + peso.slice(2);
+    }
+
     event.target.setSelectionRange(cursorPosition, cursorPosition);
   });
 
@@ -44,12 +55,14 @@ document.addEventListener('DOMContentLoaded', function () {
     let altura = formatarPesoAltura(event.target.value);
     altura = isNaN(altura) ? '' : altura.toString();
 
-    // Adiciona automaticamente o ponto e zeros após o primeiro número
-    if (altura.length === 1) {
-      altura += '.';
+    // Formata altura para mostrar em metros
+    if (altura.length === 3) {
+      altura = altura.slice(0, 1) + '.' + altura.slice(1);
+    } else if (altura.length === 4) {
+      altura = altura.slice(0, 2) + '.' + altura.slice(2);
     }
 
-    event.target.value = altura === '' ? '' : adicionarZeros(altura, 2);
+    event.target.value = altura;
     event.target.setSelectionRange(cursorPosition, cursorPosition);
   });
 
@@ -61,7 +74,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const imc = peso / (altura * altura);
     return imc.toFixed(2);
   };
-
   const categorizarIMC = function (imc) {
     if (imc === 'Altura inválida') {
       return 'Altura inválida';
