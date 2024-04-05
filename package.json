@@ -1,6 +1,6 @@
 {
   "name": "bmi-web",
-  "version": "1.0.0",
+  "version": "1.4.0",
   "devDependencies": {
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
