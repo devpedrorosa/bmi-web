@@ -1,10 +1,10 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const pesoInput = document.getElementById('peso');
   const alturaInput = document.getElementById('altura');
   const resultadoDiv = document.getElementById('result');
 
   // HACK: NAO ESTA FUCIONANDO CONFORME O ESPERADO
-  const formatarPesoAltura = function(valor) {
+  const formatarPesoAltura = function (valor) {
     // Remove caracteres não numéricos
     const numeroFormatado = valor.replace(/[^0-9.]/g, '');
 
@@ -34,26 +34,23 @@ document.addEventListener('DOMContentLoaded', function() {
   //   }
   // };
 
-  pesoInput.addEventListener('input', function(event) {
+  pesoInput.addEventListener('input', function (event) {
     const cursorPosition = event.target.selectionStart;
     let peso = formatarPesoAltura(event.target.value);
     peso = isNaN(peso) ? '' : peso.toString();
 
     // HACK: SO FUNCIONA SE COLOCAR UM PONTO
-    //formata o peso para mostrar em quilogramas
+    // formata o peso para mostrar em quilogramas
     if (peso.length === 3) {
       peso = peso.slice(0, 1) + peso.slice(1);
     } else if (peso.length === 4) {
       peso = peso.slice(0, 2) + peso.slice(2);
     }
 
-    event.target.value = peso === '' ? '' : adicionarZeros(peso, 2); // Alterado para 2 casas decimais
     event.target.setSelectionRange(cursorPosition, cursorPosition);
-
   });
 
-
-  alturaInput.addEventListener('input', function(event) {
+  alturaInput.addEventListener('input', function (event) {
     const cursorPosition = event.target.selectionStart;
     let altura = formatarPesoAltura(event.target.value);
     altura = isNaN(altura) ? '' : altura.toString();
@@ -69,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
     event.target.setSelectionRange(cursorPosition, cursorPosition);
   });
 
-  const calcularIMC = function(peso, altura) {
+  const calcularIMC = function (peso, altura) {
     if (isNaN(peso) || isNaN(altura) || altura === 0) {
       return 'Altura inválida';
     }
@@ -77,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const imc = peso / (altura * altura);
     return imc.toFixed(2);
   };
-  const categorizarIMC = function(imc) {
+  const categorizarIMC = function (imc) {
     if (imc === 'Altura inválida') {
       return 'Altura inválida';
     } else if (imc <= 18.5) {
@@ -95,12 +92,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   };
 
-  const exibirResultado = function(imc, categoria) {
+  const exibirResultado = function (imc, categoria) {
     resultadoDiv.innerHTML = `Seu IMC é ${imc}. Categoria: ${categoria}`;
   };
 
   const form = document.getElementById('box-form');
-  form.addEventListener('submit', function(event) {
+  form.addEventListener('submit', function (event) {
     event.preventDefault();
     const peso = parseFloat(pesoInput.value.replace(',', '.'));
     const altura = parseFloat(alturaInput.value.replace(',', '.'));
