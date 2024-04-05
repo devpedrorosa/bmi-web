@@ -47,7 +47,6 @@ document.addEventListener('DOMContentLoaded', function () {
       peso = peso.slice(0, 2) + peso.slice(2);
     }
 
-    // event.target.value = peso === '' ? '' : adicionarZeros(peso, 2) // Alterado para 2 casas decimais
     event.target.setSelectionRange(cursorPosition, cursorPosition);
   });
 
