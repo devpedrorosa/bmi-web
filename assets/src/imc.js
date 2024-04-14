@@ -35,19 +35,18 @@ document.addEventListener('DOMContentLoaded', function () {
   // };
 
   pesoInput.addEventListener('input', function (event) {
-    const cursorPosition = event.target.selectionStart;
+    // const cursorPosition = event.target.selectionStart;
     let peso = formatarPesoAltura(event.target.value);
     peso = isNaN(peso) ? '' : peso.toString();
 
-    // HACK: SO FUNCIONA SE COLOCAR UM PONTO
+    // FIXME: NAO FUNCIONA
     // formata o peso para mostrar em quilogramas
-    if (peso.length === 3) {
-      peso = peso.slice(0, 1) + peso.slice(1);
-    } else if (peso.length === 4) {
-      peso = peso.slice(0, 2) + peso.slice(2);
-    }
-
-    event.target.setSelectionRange(cursorPosition, cursorPosition);
+    // if (peso.length === 3) {
+    //   peso = peso.slice(0, 1) + peso.slice(1);
+    // } else if (peso.length === 4) {
+    //   peso = peso.slice(0, 2) + peso.slice(2);
+    // }
+    // event.target.setSelectionRange(cursorPosition, cursorPosition);
   });
 
   alturaInput.addEventListener('input', function (event) {
