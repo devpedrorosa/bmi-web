@@ -14,12 +14,12 @@ const escopoImc = () => {
     const resultadoImc = calcularImc(peso, altura);
     const categoriaImc = categorizarImc(resultadoImc);
 
-    const mensagemFinal = `Seu IMC: ${resultadoImc} | Categoria: ${categoriaImc}`;
+    const mensagemFinal = `Seu IMC: ${resultadoImc.toFixed(2)} | Categoria: ${categoriaImc}`;
     exibirResultado(mensagemFinal, true);
   });
 
   const calcularImc = (a, b) => {
-    return (a / b ** 2).toFixed(2);
+    return a / b ** 2;
   };
 
   const categorizarImc = (imc) => {
