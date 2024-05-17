@@ -1,108 +1,63 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const pesoInput = document.getElementById('peso');
-  const alturaInput = document.getElementById('altura');
-  const resultadoDiv = document.getElementById('result');
+const escopoImc = () => {
+  const formulario = document.querySelector('#box-form');
 
-  // HACK: NAO ESTA FUCIONANDO CONFORME O ESPERADO
-  const formatarPesoAltura = function (valor) {
-    // Remove caracteres não numéricos
-    const numeroFormatado = valor.replace(/[^0-9.]/g, '');
+  formulario.addEventListener('submit', (evento) => {
+    evento.preventDefault();
 
-    // Verifica se o valor é vazio ou não numérico
-    if (numeroFormatado === '' || isNaN(numeroFormatado)) {
-      return '';
+    const peso = Number(formulario.querySelector('#peso').value);
+    const altura = Number(formulario.querySelector('#altura').value);
+
+    if (!validarCampo(peso, altura)) {
+      return;
     }
 
-    const numeroComoFloat = parseFloat(numeroFormatado);
+    const resultadoImc = calcularImc(peso, altura);
+    const categoriaImc = categorizarImc(resultadoImc);
 
-    return numeroComoFloat;
-  };
-
-  // FIXME: AJEITAR O ADICIONAR ZEROS
-  // const adicionarZeros = function(valor, casasDecimais) {
-  //   const partes = valor.toString().split('.');
-  //   if (partes.length === 1) {
-  //     return valor.toFixed(casasDecimais);
-  //   } else {
-  //     const parteDecimal = partes[1];
-  //     let resultado = '';
-  //     // Adiciona zeros à parte decimal se necessário
-  //     for (let i = 0; i < casasDecimais - parteDecimal.length; i++) {
-  //       resultado += '0';
-  //     }
-  //     return valor + resultado;
-  //   }
-  // };
-
-  pesoInput.addEventListener('input', function (event) {
-    // const cursorPosition = event.target.selectionStart;
-    let peso = formatarPesoAltura(event.target.value);
-    peso = isNaN(peso) ? '' : peso.toString();
-
-    // FIXME: NAO FUNCIONA
-    // formata o peso para mostrar em quilogramas
-    // if (peso.length === 3) {
-    //   peso = peso.slice(0, 1) + peso.slice(1);
-    // } else if (peso.length === 4) {
-    //   peso = peso.slice(0, 2) + peso.slice(2);
-    // }
-    // event.target.setSelectionRange(cursorPosition, cursorPosition);
+    const mensagemFinal = `Seu IMC: ${resultadoImc} | Categoria: ${categoriaImc}`;
+    exibirResultado(mensagemFinal, true);
   });
 
-  alturaInput.addEventListener('input', function (event) {
-    const cursorPosition = event.target.selectionStart;
-    let altura = formatarPesoAltura(event.target.value);
-    altura = isNaN(altura) ? '' : altura.toString();
-
-    // Formata altura para mostrar em metros
-    if (altura.length === 3) {
-      altura = altura.slice(0, 1) + '.' + altura.slice(1);
-    } else if (altura.length === 4) {
-      altura = altura.slice(0, 2) + '.' + altura.slice(2);
-    }
-
-    event.target.value = altura;
-    event.target.setSelectionRange(cursorPosition, cursorPosition);
-  });
-
-  const calcularIMC = function (peso, altura) {
-    if (isNaN(peso) || isNaN(altura) || altura === 0) {
-      return 'Altura inválida';
-    }
-
-    const imc = peso / (altura * altura);
-    return imc.toFixed(2);
+  const calcularImc = (a, b) => {
+    return (a / b ** 2).toFixed(2);
   };
-  const categorizarIMC = function (imc) {
-    if (imc === 'Altura inválida') {
-      return 'Altura inválida';
-    } else if (imc <= 18.5) {
-      return 'Abaixo do normal';
-    } else if (imc <= 24.9) {
-      return 'Normal';
-    } else if (imc <= 29.9) {
-      return 'Sobrepeso';
-    } else if (imc <= 35) {
-      return 'Obesidade grau 1';
-    } else if (imc <= 40) {
-      return 'Obesidade grau 2';
+
+  const categorizarImc = (imc) => {
+    if (imc < 18.5) return 'Abaixo do peso';
+    if (imc < 24.9) return 'Peso normal';
+    if (imc < 29.9) return 'Acima do peso';
+    if (imc < 34.9) return 'Obesidade grau 1';
+    if (imc < 39.9) return 'Obesidadade grau 2';
+    return 'Obesidade grau 3';
+  };
+
+  const criarParagrafo = () => {
+    const paragrafo = document.createElement('p');
+    return paragrafo;
+  };
+
+  const exibirResultado = (mensagem, validar) => {
+    const resultado = document.querySelector('#result');
+    resultado.innerHTML = '';
+    const paragrafo = criarParagrafo();
+
+    if (validar) {
+      paragrafo.classList.add('resultado-verde');
     } else {
-      return 'Obesidade grau 3';
+      paragrafo.classList.add('resultado-vermelho');
     }
+
+    paragrafo.innerHTML = mensagem;
+    resultado.appendChild(paragrafo);
   };
 
-  const exibirResultado = function (imc, categoria) {
-    resultadoDiv.innerHTML = `Seu IMC é ${imc}. Categoria: ${categoria}`;
+  const validarCampo = (iPeso, iAltura) => {
+    if (!iPeso || !iAltura) {
+      exibirResultado('Preencha os dois campos');
+      return false;
+    }
+    return true;
   };
+};
 
-  const form = document.getElementById('box-form');
-  form.addEventListener('submit', function (event) {
-    event.preventDefault();
-    const peso = parseFloat(pesoInput.value.replace(',', '.'));
-    const altura = parseFloat(alturaInput.value.replace(',', '.'));
-
-    const imc = calcularIMC(peso, altura);
-    const categoria = categorizarIMC(imc);
-    exibirResultado(imc, categoria);
-  });
-});
+escopoImc();

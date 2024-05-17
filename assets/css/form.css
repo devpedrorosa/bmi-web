@@ -61,3 +61,16 @@
 #result {
   color: whitesmoke;
 }
+
+.resultado-verde {
+  padding: 1rem;
+  background-color: green;
+  font-weight: bold;
+  border-radius: 3px;
+}
+.resultado-vermelho {
+  padding: 1rem;
+  background-color: red;
+  font-weight: bold;
+  border-radius: 3px;
+}
