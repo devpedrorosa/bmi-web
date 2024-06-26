@@ -12,10 +12,6 @@ Welcome to my BMI Calculator, a tool I developed on my own to help you monitor a
 2. Enter your height in meters.
 3. Click the "Calculate BMI" button.
 
-## LINK WEBSITE:
-<br>
-
-* [BMI-CALCULATOR](https://imc-calculadora-devpedrorosa.netlify.app/)
 
 
  
